@@ -1,0 +1,50 @@
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#computer {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#computer_img {
+    margin-left: 100px;
+}
+
+#computer h2 {
+    margin-left: 400px;
+}
+
+#Choice,
+#Score,
+#winner {
+    text-align: center;
+}
+
+#Score {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#Choice {
+    font-size: 20px;
+    font-weight: 200;
+}
+#winner{
+    font-size: 25px;
+    font-weight: bolder;
+}

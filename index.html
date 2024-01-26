@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock_paper_scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button id="rock" onclick="Rock()">Rock</button>
-    <button id="paper" onclick="Paper()">Paper</button>
-    <button id="scissors" onclick="Scissors()">Scissors</button>
-    <div id="computer"></div>
+    <h2>CHOOSE</h2>
+    <div class="images">
+        <img src="rock.png" onclick="Rock()">
+        <img src="paper.png" onclick="Paper()">
+        <img src="scissors.png" onclick="Scissors()">
+    </div>
+    <div id="computer">
+        <h2>Computer choice:</h2><img id="computer_img" src="cp.jpg">
+    </div>
     <br>
     <div id="Choice"></div>
     <br>
     <div id="Score"></div>
     <br>
     <div id="winner"></div>
-    <!-- <script src="script.js"> -->
     <script src="script.js">
-     
+
     </script>
 </body>
 

@@ -1,7 +1,13 @@
-// min and max both included randpm number function
-//         function getRndInteger(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1) ) + min;
-// }
+const computer_div = document.getElementById("computer_img");
+const computer_rock = () => {
+    computer_div.src = "rock.png";
+};
+const computer_paper = () => {
+    computer_div.src = "paper.png";
+};
+const computer_scissors = () => {
+    computer_div.src = "scissors.png";
+};
 var p = 0;
 var comp = 0;
 function getRnd() {
@@ -31,20 +37,23 @@ function score() {
         }
         p = 0;
         comp = 0;
+        computer_div.src = "cp.jpg";
+
     };
 }
 const Rock = () => {
     document.getElementById("winner").innerHTML = "";
-    console.log("In");
     const computer = getRnd();
-    document.getElementById("computer").innerHTML = `Computer choice: ${computer}`;
     if (computer == "scissors") {
+        computer_scissors();
         win("rock", computer);
     }
     else if (computer == "paper") {
+        computer_paper();
         lose("rock", computer);
     }
     else {
+        computer_rock();
         tie();
     }
     score();
@@ -52,14 +61,16 @@ const Rock = () => {
 const Paper = () => {
     document.getElementById("winner").innerHTML = "";
     const computer = getRnd();
-    document.getElementById("computer").innerHTML = `Computer choice: ${computer}`;
     if (computer == "scissors") {
+        computer_scissors();
         lose("paper", computer);
     }
     else if (computer == "rock") {
+        computer_rock();
         win("paper", computer);
     }
     else {
+        computer_paper();
         tie();
     }
     score();
@@ -67,14 +78,16 @@ const Paper = () => {
 const Scissors = () => {
     document.getElementById("winner").innerHTML = "";
     const computer = getRnd();
-    document.getElementById("computer").innerHTML = `Computer choice: ${computer}`;
     if (computer == "rock") {
+        computer_rock();
         lose("scissors", computer);
     }
     else if (computer == "paper") {
+        computer_paper();
         win("scissors", computer);
     }
     else {
+        computer_scissors();
         tie();
     }
     score();
